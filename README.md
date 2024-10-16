@@ -3,6 +3,7 @@
 
 ## 项目结构
 
+```
 project/
 │
 ├── run.py                 # 主执行脚本，负责解析参数并调用其他模块
@@ -20,7 +21,7 @@ project/
 │   ├── page_detail.jsonl  # 保存帖子详细信息的JSON Lines文件
 │   └── data.jsonl         # 保存分析结果的JSON Lines文件
 └── README.md              # 项目说明文件
-
+```
 
 ## 快速开始
 
