@@ -3,9 +3,9 @@ import matplotlib.pyplot as plt
 
 def analyse(args, data_list):
     # 1. 统计 location 的数量
-    # location_analyse(data_list)
+    location_analyse(data_list)
     # 2. 统计 mess 的数量
-    # mess_analyse(data_list)
+    mess_analyse(data_list)
     # 3. 统计 is_follow_up 的数量
     follow_up_analyse(data_list)
 
@@ -42,7 +42,8 @@ def location_analyse(data_list):
     # 添加中文支持
     plt.rcParams['font.sans-serif'] = ['Arial Unicode MS']
 
-    location_dict.pop('unknown')
+    if 'unknown' in location_dict:
+        location_dict.pop('unknown')
     labels = list(location_dict.keys())
     sizes = list(location_dict.values())
     # sizes 占比百分之四以下的合并为 其他
